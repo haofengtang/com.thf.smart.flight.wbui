@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_XqkCQKknEeObFrG_clJBYA" elementId="com.thf.ge.am.wbui.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Zdy6cKknEeObFrG_clJBYA" elementId="com.thf.ge.am.wbui.trimmedwindow.buildmonitor" label="GE Additive Manufacturing Workbench" iconURI="platform:/plugin/com.thf.smart.flight.wbui/icons/logo_GE_48x48.png" tooltip="GE Additive Manufacturing Workbench" x="10" y="10" width="500" height="500">
+    <tags>shellMaximized</tags>
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_MtU-EAPWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.perspectivestack.0">
+      <children xsi:type="advanced:Perspective" xmi:id="_QryXsAPWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.perspective.meltpooldataanalytics" label="Melt Pool Data Analytics" tooltip="Melt Pool Data Analytics">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_dRQVYAWBEeei_JIngCF_Xw" elementId="com.thf.ge.am.wbui.partsashcontainer.2" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_xgZ1kCYKEeeQfNc7CDUXfQ" elementId="com.thf.ge.am.wbui.partsashcontainer.0" containerData="3">
+            <children xsi:type="basic:Part" xmi:id="_iDShAAWBEeei_JIngCF_Xw" elementId="com.thf.ge.am.wbui.part.chartdemo01" containerData="4" contributionURI="bundleclass://com.thf.smart.flight.wbui/com.thf.ge.am.wbui.viewpart.prototypes.addons.LineChartSnippet" label="Chart Demo 01" tooltip="Chart Demo 01"/>
+            <children xsi:type="basic:Part" xmi:id="_hpb2kAWBEeei_JIngCF_Xw" elementId="com.thf.ge.am.wbui.part.chartdemo02" containerData="4" contributionURI="bundleclass://com.thf.smart.flight.wbui/com.thf.ge.am.wbui.viewpart.prototypes.addons.PieChartSnippet" label="Chart Demo 02" tooltip="Chart Demo 02"/>
+            <children xsi:type="basic:PartStack" xmi:id="_fsH1UAWBEeei_JIngCF_Xw" elementId="com.thf.ge.am.wbui.partstack.3" containerData="2"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_2jcBsBwyEeeQfNc7CDUXfQ" elementId="com.thf.ge.am.wbui.partstack.4" containerData="7">
+            <children xsi:type="basic:Part" xmi:id="_5dwdwBwyEeeQfNc7CDUXfQ" elementId="com.thf.ge.am.wbui.part.worldmapchart" contributionURI="bundleclass://com.thf.smart.flight.wbui/com.thf.smart.flight.wbui.viewpart.GMapDemo" label="World Map Chart"/>
+            <children xsi:type="basic:Part" xmi:id="_gL4TcAWBEeei_JIngCF_Xw" elementId="com.thf.ge.am.wbui.part.equipmentlocator" containerData="5" contributionURI="bundleclass://com.thf.smart.flight.wbui/com.thf.ge.am.wbui.viewpart.EquipmentLocator" label="Equipment Locator" tooltip="Equipment Locator"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <trimBars xmi:id="_hDe-4APWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_jb0vQAPWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.toolbar.0"/>
+      <children xsi:type="menu:ToolControl" xmi:id="_tFmF4APWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.toolcontrol.0" contributionURI="bundleclass://com.thf.smart.flight.wbui/com.thf.ge.am.wbui.control.SpacerControl">
+        <tags>stretch</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_6OFmIAPWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.toolcontrol.1" contributionURI="bundleclass://com.thf.smart.flight.wbui/com.thf.ge.am.wbui.control.ComboControl"/>
+    </trimBars>
+    <trimBars xmi:id="_osfXoAPWEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.trimbar.1" side="Bottom"/>
+  </children>
+  <toolBarContributions xmi:id="_5JOhwAPUEeeYvMjNipKZVw" elementId="com.thf.ge.am.wbui.toolbarcontribution.0"/>
+  <addons xmi:id="_XqkCQaknEeObFrG_clJBYA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_XqkCQqknEeObFrG_clJBYA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_XqkCQ6knEeObFrG_clJBYA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_XqkCRKknEeObFrG_clJBYA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_XqkCRaknEeObFrG_clJBYA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_XqkCRqknEeObFrG_clJBYA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_XqkCR6knEeObFrG_clJBYA" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+</application:Application>

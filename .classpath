@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="com/thf/ge/am/wbui/viewpart/ScatterPlot3DView.java|com/thf/ge/am/wbui/viewpart/ScatterPlot3DView2.java|com/thf/ge/am/wbui/viewpart/ChartDemo_01.java|com/thf/ge/am/wbui/viewpart/ChartDemo_02.java|com/thf/ge/am/wbui/viewpart/prototypes/jz3d/ScatterPlot3DView.java|com/thf/ge/am/wbui/viewpart/prototypes/jz3d/ScatterPlot3DView2.java|resources/ScatterPlot3DView.java|resources/ScatterPlot3DView2.java" kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="com.thf.ge.am.wbui/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="js"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

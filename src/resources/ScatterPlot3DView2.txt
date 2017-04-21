@@ -1,0 +1,90 @@
+package com.thf.ge.am.wbui.viewpart.prototypes.jz3d;
+
+import java.awt.Component;
+
+import javax.annotation.PostConstruct;
+
+import org.eclipse.swt.widgets.Composite;
+//import org.eclipse.ui.part.ViewPart;
+import org.jzy3d.bridge.swt.Bridge;
+import org.jzy3d.chart.Chart;
+import org.jzy3d.chart.ChartLauncher;
+import org.jzy3d.colors.Color;
+import org.jzy3d.colors.ColorMapper;
+import org.jzy3d.colors.colormaps.ColorMapRainbow;
+import org.jzy3d.maths.Range;
+import org.jzy3d.plot3d.builder.Builder;
+import org.jzy3d.plot3d.builder.Mapper;
+import org.jzy3d.plot3d.builder.concrete.OrthonormalGrid;
+import org.jzy3d.plot3d.primitives.Shape;
+import org.jzy3d.plot3d.rendering.canvas.Quality;
+
+public class ScatterPlot3DView2 {
+
+	public static final String ID = "sc.ndt.aml.view.ScatterPlot3DView"; //$NON-NLS-1$
+	private Chart chart;
+
+	public ScatterPlot3DView2() {
+	}
+
+	@PostConstruct
+	public void createPartControl(Composite parent) {
+
+		Bridge.adapt(parent, (Component) getChart().getCanvas());
+
+		createActions();
+//		initializeToolBar();
+//		initializeMenu();
+	}
+
+	public Chart getChart() {
+		// Define a function to plot
+		Mapper mapper = new Mapper() {
+		    public double f(double x, double y) {
+		        return 10 * Math.sin(x / 10) * Math.cos(y / 20) * x;
+		    }
+		};
+
+		// Define range and precision for the function to plot
+		Range range = new Range(-150, 150);
+		int steps = 50;
+
+		// Create a surface drawing that function
+		Shape surface = Builder.buildOrthonormal(new OrthonormalGrid(range, steps, range, steps), mapper);
+		surface.setColorMapper(new ColorMapper(new ColorMapRainbow(), surface.getBounds().getZmin(), surface.getBounds().getZmax(), new Color(1, 1, 1, .5f)));
+		surface.setFaceDisplayed(true);
+		surface.setWireframeDisplayed(false);
+		surface.setWireframeColor(Color.BLACK);
+
+		// Create a chart and add the surface
+		Chart chart = new Chart(Quality.Advanced);
+		chart.getScene().getGraph().add(surface);
+		ChartLauncher.openChart(chart);
+		return chart;
+	}
+
+	/**
+	 * Create the actions.
+	 */
+	private void createActions() {
+		// Create the actions
+	}
+
+//	/**
+//	 * Initialize the toolbar.
+//	 */
+//	private void initializeToolBar() {
+//		IToolBarManager toolbarManager = getViewSite().getActionBars().getToolBarManager();
+//	}
+//
+//	/**
+//	 * Initialize the menu.
+//	 */
+//	private void initializeMenu() {
+//		IMenuManager menuManager = getViewSite().getActionBars().getMenuManager();
+//	}
+//
+	public void setFocus() {
+		// Set the focus
+	}
+}
